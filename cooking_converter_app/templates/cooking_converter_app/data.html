@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <title>Conversor de medidas culinárias</title>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <a href="{% url 'index' %}"><img id="home-image" src="{% static 'images/home.svg' %}"></a>
+            <p class="menu-text">Dados</p>
+        </header>
+        <main>
+            <div id="document-content">
+                <table id="utensils-table">
+                    <tr>
+                        <th class="left-column">Recipiente</th>
+                        <th class="right-column">Volume</th>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Xícara</td>
+                        <td class="right-column">240 ml</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Copo americano</td>
+                        <td class="right-column">190 ml</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Colher de sopa</td>
+                        <td class="right-column">15 ml</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Colher de chá</td>
+                        <td class="right-column">5 ml</td>
+                    </tr>
+                </table>
+                {% if ingredients %}
+                <table id="ingredients-table">
+                    <tr>
+                        <th class="left-column" >Ingrediente</th>
+                        <th class="right-column">Densidade aparente</th>
+                    </tr>
+                    {% for ingredient in ingredients %}
+                    <tr>
+                        <td class="left-column">{{ ingredient }}</td>
+                        <td class="right-column">{{ ingredient.bulk_density }} g/cm³</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% else %}
+                <p>Algo deu errado. Tente atualizar a página.</p>
+                {% endif %}
+            </div>
+        </main>
+        <footer>
+            <a id="github-link" href="https://github.com/petrusmassabki/smart-cooking-converter">
+                <img id="github-logo" src="{% static 'images/github_logo.png' %}" alt="Logo Github"></a>
+        </footer>
+    </div>
+</body>
+</html>

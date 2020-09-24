@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <title>Conversor de medidas culinárias</title>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <a href="{% url 'index' %}"><img id="home-image" src="{% static 'images/home.svg' %}"></a>
+            <a class="menu-text" href="{% url 'data' %}">Dados</a>
+        </header>
+        <main>
+            <div id="result-box">
+                <div id="ingredient-image">
+                    {% if ingredient.icon != '' %}
+                    <img src="{{ ingredient.icon.url }}" alt="{{ ingredient }}">
+                    {% else %}
+                    <img src="{% static 'images/farinha.svg' %}" alt="Comida">
+                    {% endif %}
+                </div>
+                <div id="result-content">
+                    {% if utensils_result %}
+                    <h2>Você pode substituir {{ grams }} g de {{ ingredient|lower }} por</h2>
+                    <div id="utensils-result">
+                        {% for utensil in utensils_result %}
+                        <h1>{{ utensil }}</h1>
+                        {% if not forloop.last %}
+                        <h1>+</h1>
+                        {% endif %}
+                        {% endfor %}
+                        <h1>de {{ ingredient|lower }}</h1>
+                    </div>
+                    <h2>({{ grams_result }} g)</h2>
+                    {% if error_msg != '' %}
+                    <h3 class="error-margin-message">Não é possível obter uma aproximação dentro da margem de erro para
+                        {{ grams }} g de {{ ingredient|lower }} usando somente os utensílios selecionados</h3>
+                    {% endif %}
+                    {% else %}
+                    <h1 class="error-message">Os utensílios escolhidos não são adequados para medir {{ grams }} g
+                        de {{ ingredient|lower }}</h1>
+                    {% endif %}
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a id="github-link" href="https://github.com/petrusmassabki/smart-cooking-converter">
+                <img id="github-logo" src="{% static 'images/github_logo.png' %}" alt="Logo Github"></a>
+        </footer>
+    </div>
+</body>
+</html>

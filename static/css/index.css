@@ -1,0 +1,349 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 0.5rem;
+}
+
+a {
+    line-height: 2rem;
+}
+
+#home-image {
+    opacity: 0.3;
+    height: 3rem;
+    margin: 1rem 0;
+    vertical-align: middle;
+}
+
+.menu-text {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#index-title-container {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    width: 100%;
+    font-weight: 400;
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    width: 100%;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+#ingredient-image img {
+    height: 10rem;
+    margin-bottom: 3rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    margin: auto 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.form-section {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section + .form-section{
+    margin-top: 1rem;
+}
+
+#other-form-sections {
+    margin-top: 1.5rem;
+}
+
+.selectize-dropdown, .selectize-input, .selectize-input input {
+    line-height: 3rem;
+    font-size: 1.6rem;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ddd;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #4ecdc4;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form-section #grams-input {
+    width: 100%;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    color: #303030;
+    font-family: inherit;
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    padding: 8px 8px;
+    display: inline-block;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+#grams-input:focus {
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+
+}
+
+#form .form-title {
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+}
+
+#form legend {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+}
+
+#button-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 5rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    border: 0;
+    color: rgb(245, 245, 245);
+    background-color: rgb(255, 107, 107);
+    border-bottom: 5px solid rgb(235, 87, 87);
+    border-radius: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(235, 87, 87);
+    border-bottom: 5px solid rgb(215, 67, 67);
+    transition: 0.1s;
+}
+
+button:focus {
+    outline: none;
+}
+
+#button-image {
+    padding: 0.5rem 0.5rem 0.5rem;
+    height: 100%;
+}
+
+#description-text {
+    text-align: justify;
+}
+
+#result-content {
+    font-size: 1.6rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 0.5rem;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#github-logo {
+    vertical-align: middle;
+    height: 3rem;
+    margin: 1rem 0;
+    opacity: 0.3;
+}
+
+.text-footer {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: right;
+    color: rgb(245, 245, 245);
+}
+
+#index-logo {
+    height: 270px;
+}
+
+#error-utensils,
+#error-ingredient,
+#error-grams {
+    padding: 0.2rem 0;
+    height: 2.2rem;
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+}
+
+#result-box {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 3rem 2rem;
+    display: inline-block;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+}
+
+#utensils-result {
+    margin: 3rem 0;
+}
+
+.error-message {
+    color: rgb(255, 107, 107);
+}
+
+.error-margin-message {
+    color: rgb(255, 107, 107);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+#document-content,
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+table + table {
+    margin-top: 2rem;
+}
+
+.left-column {
+    text-align: left;
+    width: 50%;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+    text-align: right;
+    width: 50%;
+}
+
+@media (min-width: 700px) {
+
+    .selectize-dropdown,
+    .selectize-input,
+    .selectize-input input,
+    .form-section #grams-input,
+    .form-section fieldset {
+        line-height: 3rem;
+        font-size: 2rem;
+    }
+
+    .checkbox-container:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    form .form-title {
+        font-size: 2.4rem;
+    }
+
+    form {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #utensils-form-section,
+    #other-form-sections {
+        width: 48%;
+        margin-top: 0;
+    }
+
+    .error-margin-message {
+        font-size: 1.7rem;
+    }
+}
