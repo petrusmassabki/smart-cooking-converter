@@ -70,7 +70,7 @@ def mass_to_utensils(grams, density, utensils):
     ingredient_vol = grams / density  # Ingredient volume
     remaining_vol = ingredient_vol
 
-    while error >= rel_tol or error * grams > 10:
+    while error >= rel_tol or error * grams > abs_tol:
 
         u_qty = remaining_vol / u_vols_df  # Utensil quantity
 
