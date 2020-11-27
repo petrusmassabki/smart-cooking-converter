@@ -1,10 +1,18 @@
-﻿# Smart Cooking Converter
+# Smart Cooking Converter
 
-Aplicação web para conversão inteligente de gramas para medidas culinárias
+Aplicação web desenvolvida em Django para conversão inteligente de gramas em medidas culinárias. Uma versão de teste pode ser conferida [aqui](http://petrusmassabki.pythonanywhere.com/).
 
 ![App views](https://github.com/petrusmassabki/smart-cooking-converter/blob/master/screens.png)
 
 ## Funcionamento
+
+Com este aplicativo, o usuário pode substituir a medida de um ingrediente (em gramas) pela melhor combinação dos utensílios de cozinha desejados.
+
+Conversores de medidas culinárias normalmente realizam cálculos exatos de equivalência, o que frequentemente resulta em medidas quebradas, pouco úteis na cozinha do dia a dia. Este aplicativo oferece uma alternativa e apresenta os resultados em frações de no mínimo 1/4, priorizando a praticidade e flexibilizando a exatidão. Em muitos casos, combinações simples de utensílios - ou de suas frações - geram medidas de equivalência mais facilmente manejáveis do que um único utensílio. Pensando nisso, o cálculo de equivalência não é realizado para cada recipiente, individualmente, mas sobre o conjunto de recipientes escolhidos pelo usuário. Desse modo, é possível definir a melhor *combinação* que satisfaz a medida desejada, seguindo alguns critérios:
+
+- A margem de erro da medida de equivalência deve ser de no máximo 5% ou 10 gramas;
+- A melhor combinação é a composta pelo menor número possível de recipientes;
+- Se a margem de erro for satisfeita, a melhor combinação é escolhida, ainda que outra produza um resultado mais exato.
 
 ## Instalação
 
