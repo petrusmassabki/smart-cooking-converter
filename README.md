@@ -8,7 +8,9 @@ Aplicação web desenvolvida em Django para conversão inteligente de gramas em 
 
 Com este aplicativo, o usuário pode substituir a medida de um ingrediente (em gramas) pela melhor combinação dos utensílios de cozinha desejados.
 
-Conversores de medidas culinárias normalmente realizam cálculos exatos de equivalência, o que frequentemente resulta em medidas quebradas, pouco úteis na cozinha do dia a dia. Este aplicativo oferece uma alternativa e apresenta os resultados em frações de no mínimo 1/4, priorizando a praticidade e flexibilizando a exatidão. Em muitos casos, combinações simples de utensílios - ou de suas frações - geram medidas de equivalência mais facilmente manejáveis do que um único utensílio. Pensando nisso, o cálculo de equivalência não é realizado para cada recipiente, individualmente, mas sobre o conjunto de recipientes escolhidos pelo usuário. Desse modo, é possível definir a melhor *combinação* que satisfaz a medida desejada, seguindo alguns critérios:
+Conversores de medidas culinárias normalmente realizam cálculos exatos de equivalência, o que frequentemente resulta em medidas quebradas, pouco úteis na cozinha do dia a dia. Este aplicativo oferece uma alternativa e apresenta os resultados em frações de no mínimo 1/4, priorizando a praticidade e flexibilizando a exatidão.
+
+Em muitos casos, combinações simples de utensílios - ou de suas frações - geram medidas de equivalência mais facilmente manejáveis do que um único utensílio. Pensando nisso, o cálculo de equivalência não é realizado para cada recipiente, individualmente, mas sobre o conjunto de recipientes escolhidos pelo usuário. Desse modo, é possível definir a melhor *combinação* que satisfaz a medida desejada, seguindo alguns critérios:
 
 - A margem de erro da medida de equivalência deve ser de no máximo 5% ou 10 gramas;
 - A melhor combinação é a composta pelo menor número possível de recipientes;
