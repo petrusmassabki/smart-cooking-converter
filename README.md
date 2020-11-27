@@ -6,7 +6,7 @@ Aplicação web desenvolvida em Django para conversão inteligente de gramas em 
 
 ## Funcionamento
 
-Com este aplicativo, o usuário pode substituir a medida de um ingrediente (em gramas) pela melhor combinação dos utensílios de cozinha desejados.
+Esta aplicação substitui a medida de um ingrediente (em gramas) pela melhor combinação dos utensílios de cozinha desejados.
 
 Conversores de medidas culinárias normalmente realizam cálculos exatos de equivalência, o que frequentemente resulta em medidas quebradas, pouco úteis na cozinha do dia a dia. Este aplicativo oferece uma alternativa e apresenta os resultados em frações de no mínimo 1/4, priorizando a praticidade e flexibilizando a exatidão.
 
