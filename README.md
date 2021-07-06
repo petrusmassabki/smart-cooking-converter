@@ -1,6 +1,6 @@
 # Smart Cooking Converter
 
-Aplicação web desenvolvida em Django para conversão inteligente de gramas em medidas culinárias. Uma versão de teste pode ser conferida [aqui](http://petrusmassabki.pythonanywhere.com/).
+Aplicação web desenvolvida em Django para conversão inteligente de gramas em medidas culinárias.
 
 ![App views](https://github.com/petrusmassabki/smart-cooking-converter/blob/master/screens.png)
 
